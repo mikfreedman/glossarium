@@ -18,7 +18,12 @@ end
 
 gem 'unicorn'
 
+group :test do
+  gem 'shoulda-matchers'
+end
+
 group :development, :test do
+  gem 'better_errors'
   gem 'pry'
   gem 'rspec-rails', '~> 2.0'
 end
