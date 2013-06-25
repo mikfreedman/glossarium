@@ -14,4 +14,8 @@ group :doc do
 end
 
 gem 'unicorn'
-gem 'pry'
+
+group :development, :test do
+  gem 'pry'
+  gem 'rspec-rails', '~> 2.0'
+end
