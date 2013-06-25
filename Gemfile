@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'zurb-foundation'
+gem "haml-rails"
 
 group :doc do
   gem 'sdoc', require: false
