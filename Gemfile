@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'zurb-foundation'
 gem "haml-rails"
+gem 'simple_form', git: "https://github.com/plataformatec/simple_form.git"
 
 group :doc do
   gem 'sdoc', require: false
