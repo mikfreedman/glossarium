@@ -18,13 +18,14 @@
     = csrf_meta_tags
   %body
     / Header and Nav
-    = render :partial => 'layouts/header_and_nav'
-    .row
-      / Main Content Section
-      / This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens
-      .large-9.push-3.columns
-        = yield
-      = render :partial => 'layouts/nav_sidebar'
+    .main-content
+      = render :partial => 'layouts/header_and_nav'
+      .row
+        / Main Content Section
+        / This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens
+        .large-9.push-3.columns
+          = yield
+        = render :partial => 'layouts/nav_sidebar'
     / Footer
     = render :partial => 'layouts/footer'
 
