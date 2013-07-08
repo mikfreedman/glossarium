@@ -10,6 +10,7 @@
 %table
   %tr
     %th Name
+    %th Tag List
     %th
     %th
     %th
@@ -17,6 +18,7 @@
   - @entries.each do |entry|
     %tr
       %td= entry.name
+      %td= entry.tag_list_links
       %td= link_to 'Show', entry
       %td= link_to 'Edit', edit_entry_path(entry)
       %td= link_to 'Destroy', entry, :method => :delete, :data => { :confirm => 'Are you sure?' }

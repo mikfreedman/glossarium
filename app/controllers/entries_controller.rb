@@ -2,18 +2,20 @@ class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
   def index
-    @entries = Entry.all
+    if params[:tag]
+      @entries = Entry.tagged_with(params[:tag]).decorate
+    else
+      @entries = Entry.all.decorate
+    end
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @entry = Entry.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @entry = Entry.new(entry_params)
@@ -50,11 +52,11 @@ class EntriesController < ApplicationController
   end
 
   private
-    def set_entry
-      @entry = Entry.find(params[:id])
-    end
+  def set_entry
+    @entry = Entry.find(params[:id]).decorate
+  end
 
-    def entry_params
-      params.require(:entry).permit(:name)
-    end
+  def entry_params
+    params.require(:entry).permit(:name, :tag_list)
+  end
 end

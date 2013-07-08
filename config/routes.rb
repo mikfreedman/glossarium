@@ -55,5 +55,6 @@ Glossarium::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-    root :to => redirect("/entries")
+  get 'tags/:tag', to: 'entries#index', as: :tag
+  root :to => redirect("/entries")
 end

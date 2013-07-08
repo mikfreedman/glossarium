@@ -3,6 +3,9 @@
 %p
   %b Name:
   = @entry.name
+%p
+  %b Tags:
+  = @entry.tag_list_links
 
 = link_to 'Edit', edit_entry_path(@entry)
 \|
