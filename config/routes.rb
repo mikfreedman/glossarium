@@ -1,5 +1,7 @@
 Glossarium::Application.routes.draw do
-  resources :entries
+  resources :collections do
+    resources :entries
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -56,5 +58,5 @@ Glossarium::Application.routes.draw do
   #     resources :products
   #   end
   get 'tags/:tag', to: 'entries#index', as: :tag
-  root :to => redirect("/entries")
+  root :to => redirect("/collections")
 end

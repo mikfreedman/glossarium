@@ -1,4 +1,5 @@
-= simple_form_for(@entry) do |f|
+- url = @entry.persisted? ? edit_collection_entry_path(@collection, @entry) : collection_entries_path(@collection)
+= simple_form_for(@entry, url: url) do |f|
   = f.error_notification
 
   .form-inputs

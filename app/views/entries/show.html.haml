@@ -7,6 +7,6 @@
   %b Tags:
   = @entry.tag_list_links
 
-= link_to 'Edit', edit_entry_path(@entry)
+= link_to 'Edit', edit_collection_entry_path(@collection, @entry)
 \|
-= link_to 'Back', entries_path
+= link_to 'Back', collection_entries_path(@collection)

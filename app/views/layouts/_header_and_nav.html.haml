@@ -7,7 +7,4 @@
       %a{:href => "#"}
         %span
   .top-bar-section
-    %ul.right
-      %li.divider.hide-for-small
-      %li
-        =link_to "entries", entries_path
+    = render :partial => 'layouts/sections', locals: { classes: "right" }

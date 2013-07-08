@@ -1,0 +1,25 @@
+.row.header-row
+  .right
+    .button.round
+      = link_to 'New Entry', new_collection_entry_path(@collection)
+      %i.foundicon-plus
+  = yield :index_header
+
+%table
+  %tr
+    %th Name
+    %th Tag List
+    %th
+    %th
+    %th
+
+  - @collection.entries.decorate.each do |entry|
+    %tr
+      %td= entry.name
+      %td= entry.tag_list_links
+      %td= link_to 'Show', collection_entry_path(@collection, entry)
+      %td= link_to 'Edit', edit_collection_entry_path(@collection, entry)
+      %td= link_to 'Destroy', collection_entry_path(@collection, entry), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+

@@ -4,4 +4,5 @@ class Entry < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   belongs_to :collection
+  validates :collection, presence: true
 end

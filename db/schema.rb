@@ -13,11 +13,21 @@
 
 ActiveRecord::Schema.define(version: 20130708115440) do
 
+  create_table "collections", force: true do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "collections", ["slug"], name: "index_collections_on_slug", unique: true, using: :btree
+
   create_table "entries", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.integer  "collection_id"
   end
 
   add_index "entries", ["slug"], name: "index_entries_on_slug", unique: true, using: :btree
