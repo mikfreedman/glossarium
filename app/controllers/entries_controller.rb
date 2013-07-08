@@ -53,7 +53,7 @@ class EntriesController < ApplicationController
 
   private
   def set_entry
-    @entry = Entry.find(params[:id]).decorate
+    @entry = Entry.friendly.find(params[:id]).decorate
   end
 
   def entry_params
