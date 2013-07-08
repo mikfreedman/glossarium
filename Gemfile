@@ -13,6 +13,7 @@ gem "haml-rails"
 gem 'simple_form', git: "https://github.com/plataformatec/simple_form.git"
 gem 'acts-as-taggable-on'
 gem 'draper'
+gem "friendly_id", git: "https://github.com/FriendlyId/friendly_id.git"
 
 group :doc do
   gem 'sdoc', require: false

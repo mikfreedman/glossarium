@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/FriendlyId/friendly_id.git
+  revision: 93333f68e0c4202addbd5eda2142ae06ba6010e3
+  specs:
+    friendly_id (5.0.0.alpha1)
+
+GIT
   remote: https://github.com/plataformatec/simple_form.git
   revision: 9b2018052e9a7706fd4b2e28cca0d04560c0f1ec
   specs:
@@ -167,6 +173,7 @@ DEPENDENCIES
   better_errors
   coffee-rails (~> 4.0.0)
   draper
+  friendly_id!
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
