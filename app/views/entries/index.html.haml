@@ -1,7 +1,7 @@
 .row.header-row
   .right
     .button.round
-      = link_to 'New Entry', new_entry_path
+      = link_to 'New Entry', new_collection_entry_path(@collection)
       %i.foundicon-plus
   %h1
     .large-8
@@ -19,9 +19,9 @@
     %tr
       %td= entry.name
       %td= entry.tag_list_links
-      %td= link_to 'Show', entry
-      %td= link_to 'Edit', edit_entry_path(entry)
-      %td= link_to 'Destroy', entry, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', collection_entry_path(@collection, entry)
+      %td= link_to 'Edit', edit_collection_entry_path(@collection, @entry)
+      %td= link_to 'Destroy', collection_entry_path(@collection), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
